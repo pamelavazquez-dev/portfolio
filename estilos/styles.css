@@ -1,0 +1,308 @@
+:root {
+    --color-principal: #b8a9d9;
+    --color-secundario: #a8d8c2;
+    --color-fondo: #faeadc;
+    --color-fondo-secciones: #dbcde4;
+    --color-texto: #4a4060;
+    --color-texto-suave: #7a7090;
+    --fuente-principal: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+#encabezado-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-principal);
+}
+
+.nombre {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.imagenEncabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    object-fit: cover; /* para que no se deforme */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-secundario);
+}
+
+#seccion-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: var(--color-fondo);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.pInicio {
+    font-size: 1.1rem;
+    color: var(--color-texto-suave);
+}
+
+#seccion-sobre-mi {
+    background-color: var(--color-fondo-secciones);
+    padding: 60px 40px;
+   /*  text-align: center; */
+    border-radius: 30px;
+}
+
+.pSobreMi {
+    line-height: 1.6;
+     text-align: justify;
+}
+.texto-sobre-mi {
+    text-align: left;
+}
+
+.contenedor-sobre-mi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.imagen-sobre-mi {
+    width: 350px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-texto);
+}
+
+#seccion-sobre-mi p {
+    color: var(--color-texto-suave);
+    margin-bottom: 14px;
+    align-items: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.lista-habilidades li {
+    background-color: var(--color-fondo);
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.lista-habilidades li:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-fondo)
+}
+
+#seccion-proyectos {
+    background-color: var(--color-fondo);
+    padding: 60px 40px;
+    text-align: center;
+
+}
+
+.tituloProyectos {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-texto);
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 2px solid var(--color-fondo-secciones);
+    border-radius: 12px;
+    padding: 30px;
+    width: 380px;
+}
+
+.tarjeta:hover {
+    border-color: var(--color-secundario);
+}
+
+.tituloTarjeta {
+    font-size: 1.3rem;
+    color: var(--color-texto);
+    margin-bottom: 12px;
+}
+
+.pTarjeta {
+    font-size: 0.95rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 20px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid var(--color-principal);
+    border-radius: 30px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: var(--color-principal);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton:hover {
+    background: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+
+#seccion-contacto {
+    background-color: var(--color-fondo-secciones);
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+section#seccion-contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-texto);
+}
+
+.pContacto {
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.enlaces-contacto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#pie-pagina {
+    text-align: center;
+    padding: 24px;
+    background-color: var(--color-principal);
+    color: var(--color-texto)
+}
+
+
+@media (max-width: 1024px) {
+    header#encabezado-principal {
+        padding: 15px 30px;
+    }
+
+    section#seccion-inicio h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    header#main-header {
+        padding: 15px;
+    }
+
+    button.button {
+        width: 120px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    header#main-header {
+        flex-direction: column;
+    }
+
+    section#home-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    button.button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header#main-header {
+        text-align: center;
+    }
+
+    button.button {
+        width: 100px;
+        height: 40px;
+    }
+}

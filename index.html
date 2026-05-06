@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <title>Mi Portfolio</title>
+</head>
+
+<body>
+    <header id="encabezado-principal">
+        <div class="imagenEncabezado">
+            <img src="./assets/images/foto-encabezado.webp" alt="nombre">
+            <p class="nombre">Pamela Vázquez</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#seccion-inicio">Inicio</a></li>
+                <li><a href="#seccion-sobre-mi">Sobre mí</a></li>
+                <li><a href="#seccion-proyectos">Proyectos</a></li>
+                <li><a href="#seccion-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="seccion-inicio">
+            <h1>Hola, soy Pamela Vázquez</h1>
+            <p class="pInicio">Estudiante de desarrollo web Full stack con enfoque en frontend bonito y funcional.</p>
+            <a href="#seccion-proyectos" class="boton">Ver mis proyectos</a>
+        </section>
+
+        <section id="seccion-sobre-mi">
+            <div class="contenedor-sobre-mi">
+                <div class="texto-sobre-mi">
+                    <h2>Sobre mí</h2>
+                    <p class="pSobreMi">
+                        Apasionada por el diseño y el desarrollo web, he completado una formación en
+                        JavaScript y PHP (IFCT091PO) y actualmente estoy en un Bootcamp Fullstack con foco 
+                        en Frontend. Me gusta transformar ideas en interfaces que funcionen bien y se sientan bien.
+                    </p>
+                    <ul class="lista-habilidades">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <img src="assets/images/foto-sobremi.webp" alt="Ilustración sobre mí" class="imagen-sobre-mi">
+            </div>
+        </section>
+
+        <section id="seccion-proyectos">
+            <h2 class="tituloProyectos">Proyectos</h2>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta">
+                    <h3 class="tituloTarjeta">Guía ATV</h3>
+                    <p class="pTarjeta">Guía interactiva para supuestos diarios en una clínica veterinaria. Realizado con HTML, CSS y JavaScript.</p>
+                    <a href="https://pamelavazquez-dev.github.io/guia-atv/" target="_blank" class="boton">Ver proyecto</a>
+                </div>
+                <div class="tarjeta">
+                    <h3 class="tituloTarjeta">Este portfolio</h3>
+                    <p class="pTarjeta">Mi primer portfolio personal. Diseñado y maquetado con HTML y CSS desde cero.</p>
+                    <a href="#" class="boton">Ver código</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="seccion-contacto">
+            <h2>Contacto</h2>
+            <p class="pContacto">¿Tienes algún proyecto en mente o quieres obtener más información? Escríbeme.</p>
+            <div class="enlaces-contacto">
+                <a href="mailto:pamevazquez7@gmail.com" class="boton">Email</a>
+                <a href="https://www.linkedin.com/in/pamelavazquezfrontend/" class="boton">LinkedIn</a>
+                <a href="https://github.com/pamelavazquez-dev" class="boton">GitHub</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="pie-pagina">
+        <p>Realizado por Pamela Vázquez Rueda · 2026 · ©</p>
+    </footer>
+
+</body>
+
+</html>
