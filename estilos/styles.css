@@ -45,7 +45,13 @@ body {
     border-radius: 999px;
     object-fit: cover;
 }
-
+.imagenEncabezado {
+    display: flex;
+    flex-flow: row, wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+}
 img {
     width: 50px;
     height: 50px;
@@ -89,11 +95,14 @@ nav ul li a:hover {
 
 h1 {
     font-size: 3rem;
+    line-height: 3;
+
 }
 
 .pInicio {
     font-size: 1.1rem;
     color: var(--color-texto-suave);
+    line-height: 4;
 }
 
 #seccion-sobre-mi {
@@ -374,5 +383,8 @@ section#seccion-contacto h2 {
     .boton {
         width: 100%;
         margin: 8px 0;
+    }
+    .imagenEncabezado{
+        flex-direction: column;
     }
 }
