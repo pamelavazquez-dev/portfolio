@@ -19,6 +19,8 @@ body {
     font-family: var(--fuente-principal);
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    overflow-x: hidden;
+    max-width: auto;
 }
 
 #encabezado-principal {
@@ -27,6 +29,8 @@ body {
     align-items: center;
     padding: 20px 40px;
     background-color: var(--color-principal);
+    position: sticky;
+    top:0;
 }
 
 .nombre {
@@ -35,11 +39,11 @@ body {
     color: white;
 }
 
-.imagenEncabezado {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
+.imagenEncabezado img {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    object-fit: cover;
 }
 
 img {
@@ -265,44 +269,110 @@ section#seccion-contacto h2 {
         padding: 15px 30px;
     }
 
-    section#seccion-inicio h1 {
+    h1 {
         font-size: 2rem;
     }
 }
 
-@media (max-width: 1024px) {
-    header#main-header {
-        padding: 15px;
+@media (max-width: 768px) {
+    header#encabezado-principal {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
     }
 
-    button.button {
-        width: 120px;
-        height: 45px;
+    section#seccion-inicio {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .contenedor-sobre-mi {
+        flex-direction: column;
+    }
+
+    .imagen-sobre-mi {
+        width: 100%;
+    }
+
+    .lista-habilidades {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    #seccion-sobre-mi,
+    #seccion-proyectos,
+    #seccion-contacto {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header#encabezado-principal {
+        padding: 15px 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    header#main-header {
+    header#encabezado-principal {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    section#seccion-inicio {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .contenedor-sobre-mi {
         flex-direction: column;
     }
 
-    section#home-section {
-        height: auto;
-        padding: 20px;
+    .imagen-sobre-mi {
+        width: 100%;
     }
 
-    button.button {
-        font-size: 14px;
+    .lista-habilidades {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    #seccion-sobre-mi,
+    #seccion-proyectos,
+    #seccion-contacto {
+        padding: 40px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    header#main-header {
-        text-align: center;
+    h1 {
+        font-size: 1.6rem;
     }
 
-    button.button {
-        width: 100px;
-        height: 40px;
+    .boton {
+        width: 100%;
+        margin: 8px 0;
     }
 }
