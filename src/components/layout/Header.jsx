@@ -16,6 +16,29 @@ function Header({ isDarkMode, onToggleTheme }) {
 
   return (
     <header className="header">
+      <svg className="neonBorder" aria-hidden="true">
+        <rect
+          className="neonBorderTrack"
+          x="0.5"
+          y="0.5"
+          width="calc(100% - 1px)"
+          height="calc(100% - 1px)"
+          rx="22"
+          ry="22"
+          pathLength="100"
+        />
+        <rect
+          className="neonBorderLight"
+          x="0.5"
+          y="0.5"
+          width="calc(100% - 1px)"
+          height="calc(100% - 1px)"
+          rx="22"
+          ry="22"
+          pathLength="100"
+        />
+      </svg>
+
       <a className="brand" href="#inicio" aria-label="Ir al inicio" onClick={closeMenu}>
         <img src={profilePhoto} alt={profile.name} />
         <span>{profile.name}</span>
