@@ -797,8 +797,13 @@ main,
     max-height: 4.55rem;
   }
 
+  .brand {
+    max-width: calc(100% - 4rem);
+  }
+
   .menuToggle {
     display: grid;
+    margin-left: auto;
   }
 
   .nav {
@@ -878,7 +883,7 @@ main,
   }
 
   .brand span {
-    max-width: min(12rem, calc(100vw - 8.5rem));
+    max-width: min(10rem, calc(100vw - 9rem));
     font-size: 0.72rem;
   }
 
