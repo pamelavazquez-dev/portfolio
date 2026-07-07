@@ -1,43 +1,79 @@
-Portfolio · Pamela Vázquez
-Portfolio personal desarrollado con HTML y CSS como primer proyecto de presentación profesional.
-Tecnologías utilizadas
+# Portfolio | Pamela Vazquez
 
-HTML5
-CSS3 (Flexbox, variables CSS, media queries)
+Portfolio personal desarrollado como SPA con React y Vite para presentar mi perfil como desarrolladora web full stack junior.
 
-Estructura del proyecto
-/portfolio
-│
-├── /assets
-│   └── /images
-│       ├── foto-encabezado.webp
-│       └── foto-sobremi.webp
-│
-├── /estilos
-│   └── styles.css
-│
-└── index.html
-Secciones
+## Tecnologias
 
-Inicio — Presentación principal con enlace a proyectos
-Sobre mí — Descripción personal, formación y habilidades
-Proyectos — Tarjetas con proyectos realizados y enlaces
-Contacto — Enlaces a email, LinkedIn y GitHub
+- React
+- Vite
+- React Router
+- Tailwind CSS
+- CSS custom properties
+- JavaScript
 
-Características
+## Caracteristicas
 
-Diseño responsivo adaptado a móvil, tablet y escritorio
-Paleta de colores pastel definida con variables CSS
-Navegación fija con scroll
-Totalmente maquetado a mano, sin frameworks ni librerías
+- SPA modular con componentes, layouts, pages y datos separados.
+- Diseño responsive para escritorio, tablet y movil.
+- Modo claro y modo oscuro con preferencia guardada en `localStorage`.
+- Secciones de presentacion, perfil profesional, proyectos, stack y contacto.
+- Stack visual con iconos de tecnologias.
+- Botones preparados para enlaces a proyecto desplegado y codigo fuente.
 
-Proyectos incluidos
+## Estructura
 
-Guía ATV — Guía interactiva para una clínica veterinaria
-Este portfolio — Código fuente disponible en GitHub
+```text
+src/
+  assets/
+  components/
+    common/
+    icons/
+    layout/
+    sections/
+  data/
+  layouts/
+  pages/
+  App.jsx
+  main.jsx
+  index.css
+```
 
-Contacto
+## Comandos
 
-Email: pamevazquez7@gmail.com
-LinkedIn: pamelavazquezfrontend
-GitHub: pamelavazquez-dev
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Levantar entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+Crear build de produccion:
+
+```bash
+npm run build
+```
+
+Previsualizar la build:
+
+```bash
+npm run preview
+```
+
+## Secciones
+
+- **Inicio:** presentacion principal, foto, botones de accion y enlaces sociales.
+- **Sobre mi:** perfil profesional y enfoque de trabajo.
+- **Proyectos:** tarjetas con descripcion, stack, enlace al proyecto y boton preparado para codigo.
+- **Stack:** tecnologias principales con iconos.
+- **Contacto:** email y LinkedIn.
+
+## Contacto
+
+- Email: pamevazquez7@gmail.com
+- LinkedIn: https://www.linkedin.com/in/pamelavazquez-dev/
+- GitHub: https://github.com/pamelavazquez-dev
