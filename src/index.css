@@ -824,9 +824,9 @@ main,
     position: absolute;
     top: calc(100% + 0.7rem);
     right: 0;
-    left: 0;
+    left: auto;
     grid-column: 1 / -1;
-    width: 100%;
+    width: min(17rem, calc(100vw - 1rem));
     display: grid;
     gap: 0.45rem;
     padding: 0.9rem;
@@ -888,12 +888,17 @@ main,
   }
 
   :root:not([data-theme="dark"]) .neonBorder {
-    top: -0.25px;
+    top: -0.8px;
     right: auto;
     bottom: auto;
-    left: -1.5px;
-    width: calc(100% + 3px);
-    height: calc(100% + 1.85px);
+    left: -0.8px;
+    width: calc(100% + 1.6px);
+    height: calc(100% + 1.6px);
+    overflow: visible;
+  }
+
+  :root:not([data-theme="dark"]) .header {
+    border-color: var(--neon-a);
   }
 
   :root:not([data-theme="dark"]) .neonBorderTrack {
