@@ -798,12 +798,21 @@ main,
   }
 
   .brand {
-    max-width: calc(100% - 4rem);
+    max-width: calc(100% - 5rem);
+    padding-right: 4.2rem;
   }
 
   .menuToggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
     display: grid;
-    margin-left: auto;
+    margin-left: 0;
+    transform: translateY(-50%);
+  }
+
+  .menuToggle:hover {
+    transform: translateY(calc(-50% - 2px));
   }
 
   .nav {
@@ -873,9 +882,17 @@ main,
   }
 
   :root:not([data-theme="dark"]) .neonBorder {
-    inset: -0.5px;
-    width: calc(100% + 1px);
-    height: calc(100% + 1px);
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+  }
+
+  :root:not([data-theme="dark"]) .neonBorderTrack {
+    stroke-width: 2.6;
+  }
+
+  .menuToggle {
+    right: 0.75rem;
   }
 
   .brand {

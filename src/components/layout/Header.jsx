@@ -46,20 +46,20 @@ function Header({ isDarkMode, onToggleTheme }) {
       <svg className="neonBorder" aria-hidden="true">
         <rect
           className="neonBorderTrack"
-          x="0.5"
-          y="0.5"
-          width="calc(100% - 1px)"
-          height="calc(100% - 1px)"
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
           rx="22"
           ry="22"
           pathLength="100"
         />
         <rect
           className="neonBorderLight"
-          x="0.5"
-          y="0.5"
-          width="calc(100% - 1px)"
-          height="calc(100% - 1px)"
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
           rx="22"
           ry="22"
           pathLength="100"
