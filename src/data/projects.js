@@ -3,9 +3,9 @@ import profile from './profile';
 const projects = [
   {
     title: 'CineAtlas',
-    category: 'Frontend interactivo',
+    category: 'Frontend + llamada API',
     description:
-      'Guia web para practicar supuestos diarios en una clinica veterinaria, desarrollada con HTML, CSS y JavaScript.',
+      'Aplicación para consultar películas a partir de llamada a API (TMDB) con filtros de búsqueda y modal para ver detalles.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     url: 'https://pamelavazquez-dev.github.io/CineAtlas/',
     codeUrl: 'https://github.com/pamelavazquez-dev/CineAtlas.git',
