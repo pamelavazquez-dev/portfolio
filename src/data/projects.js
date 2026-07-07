@@ -23,8 +23,8 @@ const projects = [
     title: 'Campus Virtual The Bridge',
     category: 'Full stack',
     description:
-      'Plataforma SaaS educativa con roles de alumno y profesor. Incluye autenticación, rutas protegidas y gestión de contenido académico.',
-    stack: ['API', 'Backend', 'Frontend'],
+      'Plataforma SaaS educativa con roles de admin, alumno y profesor. Autenticación con firebase, rutas protegidas y gestión de contenido académico.',
+    stack: ['Firebase', 'Backend', 'Frontend'],
     url: 'https://campus-aprentic.vercel.app/',
     codeUrl: 'https://github.com/pamelavazquez-dev/campus-aprentic.git',
     demoCredentials: [
