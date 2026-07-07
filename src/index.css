@@ -825,6 +825,7 @@ main,
     top: calc(100% + 0.7rem);
     right: 0;
     left: 0;
+    grid-column: 1 / -1;
     width: 100%;
     display: grid;
     gap: 0.45rem;
@@ -887,9 +888,12 @@ main,
   }
 
   :root:not([data-theme="dark"]) .neonBorder {
-    inset: -0.25px -1.5px -1.6px;
-    width: auto;
-    height: auto;
+    top: -0.25px;
+    right: auto;
+    bottom: auto;
+    left: -1.5px;
+    width: calc(100% + 3px);
+    height: calc(100% + 1.85px);
   }
 
   :root:not([data-theme="dark"]) .neonBorderTrack {
