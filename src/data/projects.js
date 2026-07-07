@@ -2,13 +2,13 @@ import profile from './profile';
 
 const projects = [
   {
-    title: 'Guia ATV',
+    title: 'CineAtlas',
     category: 'Frontend interactivo',
     description:
       'Guia web para practicar supuestos diarios en una clinica veterinaria, desarrollada con HTML, CSS y JavaScript.',
     stack: ['HTML', 'CSS', 'JavaScript'],
-    url: 'https://pamelavazquez-dev.github.io/guia-atv/',
-    codeUrl: '',
+    url: 'https://pamelavazquez-dev.github.io/CineAtlas/',
+    codeUrl: 'https://github.com/pamelavazquez-dev/CineAtlas.git',
   },
   {
     title: 'Portfolio SPA',
@@ -16,17 +16,29 @@ const projects = [
     description:
       'Rediseno de mi portfolio personal como SPA moderna, con una presentacion profesional y orientada a busqueda de empleo.',
     stack: ['React', 'Vite', 'Tailwind'],
-    url: profile.githubUrl,
-    codeUrl: '',
+    url: 'https://pamelavazquez.vercel.app/',
+    codeUrl: 'https://github.com/pamelavazquez-dev/portfolio.git',
   },
   {
-    title: 'Proyecto full stack',
-    category: 'Proximamente',
+    title: 'Campus Virtual The Bridge',
+    category: 'Full stack',
     description:
-      'Espacio reservado para un proyecto con API, autenticacion, base de datos y despliegue.',
+      'Plataforma SaaS educativa con roles de alumno y profesor. Incluye autenticación, rutas protegidas y gestión de contenido académico.',
     stack: ['API', 'Backend', 'Frontend'],
-    url: profile.githubUrl,
-    codeUrl: '',
+    url: 'https://campus-aprentic.vercel.app/',
+    codeUrl: 'https://github.com/pamelavazquez-dev/campus-aprentic.git',
+    demoCredentials: [
+      {
+        role: 'Profesor',
+        email: 'lperez@aprentic.com',
+        password: 'lape1234!',
+      },
+      {
+        role: 'Alumno',
+        email: 'cruiz@aprentic.com',
+        password: 'caru1234!',
+      },
+    ],
   },
 ];
 

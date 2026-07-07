@@ -1,5 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import projects from '../../data/projects';
+
+function ProjectCard({ project }) {
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const hasDemoCredentials = Boolean(project.demoCredentials?.length);
+
+  const toggleDemoCredentials = () => {
+    setIsDemoOpen((currentValue) => !currentValue);
+  };
+
+  return (
+    <article className="projectCard">
+      {hasDemoCredentials && (
+        <button
+          className="projectDemoToggle"
+          type="button"
+          onClick={toggleDemoCredentials}
+          aria-expanded={isDemoOpen}
+        >
+          Demo
+        </button>
+      )}
+
+      <p className="projectCategory">{project.category}</p>
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+      <div className="tagList">
+        {project.stack.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
+      <div className="projectActions">
+        <a className="projectButton projectButtonPrimary" href={project.url} target="_blank" rel="noreferrer">
+          Ver proyecto
+        </a>
+        <a
+          className={`projectButton projectButtonSecondary${project.codeUrl ? '' : ' isDisabled'}`}
+          href={project.codeUrl || undefined}
+          target="_blank"
+          rel="noreferrer"
+          aria-disabled={!project.codeUrl}
+          onClick={(event) => {
+            if (!project.codeUrl) {
+              event.preventDefault();
+            }
+          }}
+        >
+          &lt;/&gt; Código
+        </a>
+      </div>
+
+      {hasDemoCredentials && isDemoOpen && (
+        <div className="demoCredentials">
+          {project.demoCredentials.map((credential) => (
+            <div className="demoCredential" key={credential.email}>
+              <strong>{credential.role}</strong>
+              <span>Email: {credential.email}</span>
+              <span>Password: {credential.password}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </article>
+  );
+}
 
 function ProjectsSection() {
   return (
@@ -11,35 +75,7 @@ function ProjectsSection() {
 
       <div className="projectGrid">
         {projects.map((project) => (
-          <article className="projectCard" key={project.title}>
-            <p className="projectCategory">{project.category}</p>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="tagList">
-              {project.stack.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-            <div className="projectActions">
-              <a className="projectButton projectButtonPrimary" href={project.url} target="_blank" rel="noreferrer">
-                Ver proyecto
-              </a>
-              <a
-                className={`projectButton projectButtonSecondary${project.codeUrl ? '' : ' isDisabled'}`}
-                href={project.codeUrl || undefined}
-                target="_blank"
-                rel="noreferrer"
-                aria-disabled={!project.codeUrl}
-                onClick={(event) => {
-                  if (!project.codeUrl) {
-                    event.preventDefault();
-                  }
-                }}
-              >
-                &lt;/&gt; Código
-              </a>
-            </div>
-          </article>
+          <ProjectCard project={project} key={project.title} />
         ))}
       </div>
     </section>
