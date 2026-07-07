@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import navigationLinks from '../../data/navigation';
 import profile from '../../data/profile';
 import { profilePhoto } from '../../assets/profile';
 
 function Header({ isDarkMode, onToggleTheme }) {
+  const headerRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => {
@@ -14,8 +15,34 @@ function Header({ isDarkMode, onToggleTheme }) {
     setIsMenuOpen((currentValue) => !currentValue);
   };
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return undefined;
+    }
+
+    const closeOnOutsideClick = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <svg className="neonBorder" aria-hidden="true">
         <rect
           className="neonBorderTrack"
