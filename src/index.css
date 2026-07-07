@@ -236,6 +236,13 @@ main,
   white-space: nowrap;
 }
 
+.navArea {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -805,11 +812,15 @@ main,
     padding-right: 0;
   }
 
+  .navArea {
+    grid-column: 2;
+    justify-self: end;
+  }
+
   .menuToggle {
     position: relative;
     top: auto;
     right: auto;
-    grid-column: 2;
     display: grid;
     margin-left: 0;
     justify-self: end;
@@ -825,7 +836,6 @@ main,
     top: calc(100% + 0.7rem);
     right: 0;
     left: auto;
-    grid-column: 1 / -1;
     width: min(17rem, calc(100vw - 1rem));
     display: grid;
     gap: 0.45rem;

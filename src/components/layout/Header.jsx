@@ -71,39 +71,41 @@ function Header({ isDarkMode, onToggleTheme }) {
         <span>{profile.name}</span>
       </a>
 
-      <button
-        className={`menuToggle${isMenuOpen ? ' isOpen' : ''}`}
-        type="button"
-        onClick={toggleMenu}
-        aria-expanded={isMenuOpen}
-        aria-controls="main-navigation"
-        aria-label={isMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-
-      <nav
-        className={`nav${isMenuOpen ? ' isOpen' : ''}`}
-        id="main-navigation"
-        aria-label="Navegacion principal"
-      >
-        {navigationLinks.map((link) => (
-          <a key={link.href} href={link.href} onClick={closeMenu}>
-            {link.label}
-          </a>
-        ))}
+      <div className="navArea">
         <button
-          className="themeToggle"
+          className={`menuToggle${isMenuOpen ? ' isOpen' : ''}`}
           type="button"
-          onClick={onToggleTheme}
-          aria-label={isDarkMode ? 'Activar modo claro' : 'Activar modo oscuro'}
-          title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+          aria-label={isMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
         >
-          <span aria-hidden="true">{isDarkMode ? '☀' : '☾'}</span>
+          <span />
+          <span />
+          <span />
         </button>
-      </nav>
+
+        <nav
+          className={`nav${isMenuOpen ? ' isOpen' : ''}`}
+          id="main-navigation"
+          aria-label="Navegacion principal"
+        >
+          {navigationLinks.map((link) => (
+            <a key={link.href} href={link.href} onClick={closeMenu}>
+              {link.label}
+            </a>
+          ))}
+          <button
+            className="themeToggle"
+            type="button"
+            onClick={onToggleTheme}
+            aria-label={isDarkMode ? 'Activar modo claro' : 'Activar modo oscuro'}
+            title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+          >
+            <span aria-hidden="true">{isDarkMode ? '☀' : '☾'}</span>
+          </button>
+        </nav>
+      </div>
     </header>
   );
 }
