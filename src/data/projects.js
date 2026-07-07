@@ -14,7 +14,7 @@ const projects = [
     title: 'Portfolio SPA',
     category: 'React + Vite',
     description:
-      'Rediseno de mi portfolio personal como SPA moderna, con una presentacion profesional y orientada a busqueda de empleo.',
+      'Rediseño de mi portfolio personal como SPA moderna, con una presentacion profesional y orientada a busqueda de empleo.',
     stack: ['React', 'Vite', 'Tailwind'],
     url: 'https://pamelavazquez.vercel.app/',
     codeUrl: 'https://github.com/pamelavazquez-dev/portfolio.git',
