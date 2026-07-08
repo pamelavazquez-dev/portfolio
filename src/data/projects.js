@@ -38,7 +38,7 @@ const projects = [
     imageAlt: 'Vista de la aplicación CineAtlas',
   },
   {
-    title: 'E-commerce Gatitos Footprints (En desarrollo)',
+    title: 'E-commerce (En desarrollo)',
     category: 'React + Vite + Firebase',
     description:
       'Tienda con productos personalizados donde el cliente puede diseñar su producto, ver stock y realizar el pago.',
