@@ -474,7 +474,7 @@ main,
   color: var(--muted);
   font-size: 1.16rem;
   line-height: 1.8;
-  text-align: justify;
+  text-align: left;
 }
 
 .heroActions,
@@ -486,7 +486,7 @@ main,
 }
 
 .heroActions {
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 39rem;
 }
 
@@ -564,7 +564,7 @@ main,
 
 .socialLinks {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.85rem;
   max-width: 39rem;
   margin-top: 1.6rem;
@@ -684,11 +684,12 @@ main,
 .aboutSection .sectionText {
   max-width: 58rem;
   margin-inline: auto;
-  text-align: justify;
+  text-align: left;
 }
 
 .projectGrid {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 2rem;
@@ -697,7 +698,7 @@ main,
 .projectCard {
   position: relative;
   display: flex;
-  min-height: 22rem;
+  min-height: 36rem;
   flex-direction: column;
   padding: 1.6rem;
   border: 1px solid rgba(219, 205, 228, 0.95);
@@ -747,6 +748,18 @@ main,
   margin: 1rem 0 0;
   color: var(--ink);
   font-size: 1.45rem;
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 1rem;
+  border: 1px solid rgba(184, 169, 217, 0.32);
+  border-radius: 0.9rem;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0.9rem 1.8rem rgba(74, 64, 96, 0.12);
 }
 
 .projectCard p:not(.projectCategory) {

@@ -24,6 +24,7 @@ function ProjectCard({ project }) {
 
       <p className="projectCategory">{project.category}</p>
       <h3>{project.title}</h3>
+      <img className="projectImage" src={project.image} alt={project.imageAlt} loading="lazy" />
       <p>{project.description}</p>
       <div className="tagList">
         {project.stack.map((item) => (
@@ -31,7 +32,18 @@ function ProjectCard({ project }) {
         ))}
       </div>
       <div className="projectActions">
-        <a className="projectButton projectButtonPrimary" href={project.url} target="_blank" rel="noreferrer">
+        <a
+          className={`projectButton projectButtonPrimary${project.url ? '' : ' isDisabled'}`}
+          href={project.url || undefined}
+          target="_blank"
+          rel="noreferrer"
+          aria-disabled={!project.url}
+          onClick={(event) => {
+            if (!project.url) {
+              event.preventDefault();
+            }
+          }}
+        >
           Ver proyecto
         </a>
         <a
