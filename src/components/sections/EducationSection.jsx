@@ -3,6 +3,8 @@ import { createPortal } from 'react-dom';
 import education from '../../data/education';
 
 function CertificateModal({ certificate, onClose }) {
+  const certificateViewerUrl = `${certificate.certificateUrl}#toolbar=1&navpanes=0&view=FitH`;
+
   return createPortal(
     <div className="certificateModal" role="dialog" aria-modal="true" aria-labelledby="certificate-title">
       <button className="certificateBackdrop" type="button" aria-label="Cerrar certificado" onClick={onClose} />
@@ -18,9 +20,15 @@ function CertificateModal({ certificate, onClose }) {
         </div>
         <iframe
           className="certificateFrame"
-          src={certificate.certificateUrl}
+          src={certificateViewerUrl}
           title={`Certificado de ${certificate.title}`}
         />
+        <div className="certificateMobileNotice">
+          <p>En móvil es mejor abrir el PDF completo para ver todas las páginas y ajustar el zoom.</p>
+          <a className="educationButton" href={certificate.certificateUrl} target="_blank" rel="noreferrer">
+            Abrir certificado completo
+          </a>
+        </div>
       </div>
     </div>,
     document.body,

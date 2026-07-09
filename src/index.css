@@ -1082,6 +1082,10 @@ main,
   background: white;
 }
 
+.certificateMobileNotice {
+  display: none;
+}
+
 .contactSection {
   width: min(880px, calc(100% - 2rem));
   margin: 4rem auto 0;
@@ -1291,7 +1295,23 @@ main,
   }
 
   .certificateFrame {
-    height: 68vh;
+    display: none;
+  }
+
+  .certificateMobileNotice {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .certificateMobileNotice p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .certificateMobileNotice .educationButton {
+    width: 100%;
   }
 }
 
