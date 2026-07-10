@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import education from '../../data/education';
 
+const isMobileViewport = () => window.matchMedia('(max-width: 700px)').matches;
+
 function CertificateModal({ certificate, onClose }) {
   const certificateViewerUrl = `${certificate.certificateUrl}#toolbar=1&navpanes=0&view=FitH`;
 
@@ -23,12 +25,6 @@ function CertificateModal({ certificate, onClose }) {
           src={certificateViewerUrl}
           title={`Certificado de ${certificate.title}`}
         />
-        <div className="certificateMobileNotice">
-          <p>En móvil es mejor abrir el PDF completo para ver todas las páginas y ajustar el zoom.</p>
-          <a className="educationButton" href={certificate.certificateUrl} target="_blank" rel="noreferrer">
-            Abrir certificado completo
-          </a>
-        </div>
       </div>
     </div>,
     document.body,
@@ -40,6 +36,20 @@ function EducationSection() {
 
   const closeModal = () => {
     setSelectedCertificate(null);
+  };
+
+  const openCertificate = (item) => {
+    if (isMobileViewport()) {
+      const openedWindow = window.open(item.certificateUrl, '_blank', 'noopener,noreferrer');
+
+      if (openedWindow) {
+        openedWindow.opener = null;
+      }
+
+      return;
+    }
+
+    setSelectedCertificate(item);
   };
 
   useEffect(() => {
@@ -77,7 +87,7 @@ function EducationSection() {
               <h3>{item.title}</h3>
               <p>{item.organization}</p>
             </div>
-            <button className="educationButton" type="button" onClick={() => setSelectedCertificate(item)}>
+            <button className="educationButton" type="button" onClick={() => openCertificate(item)}>
               Ver certificado
             </button>
           </article>
